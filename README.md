@@ -1,5 +1,7 @@
 # Score Keeper
 
+After I learn the basic of Angular 2, I build a portion of a Realtime Basketball Scorekeeping App.
+
 ## Demo
 
 ![alt tag](https://raw.github.com/davideagostini/score-keeper/master/demo.png)
