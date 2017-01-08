@@ -1,0 +1,44 @@
+<h3>{{name}}</h3>
+<div class="input-field col s6">
+    <h5>Add or Edit Player</h5>
+    <input placeholder="Add/Edit player" type="text" autofocus="" [(ngModel)]="newPlayer.name" (keyup.enter)="addPlayer()"/>
+</div>
+
+<div style="clear: both"></div>
+<div class="row">
+    <div class="col s4"><b>Name</b></div>
+    <div class="col s4"></div>
+    <div class="col s4"><b>Points</b></div>
+</div>
+<div class="row" *ngFor="let player of players">
+    <div class="col s4">
+        <button class="material-icons small btn-floating" (click)="updateNamePlayer(player)">mode_edit</button>
+        &nbsp;&nbsp;{{player.name}}
+    </div>
+    <div class="col s4">
+        <button (click)="updatePlayerPointTo2(player); newPlayer.value=''" class="btn-floating">2pt</button>
+        <button (click)="updatePlayerPointTo3(player); newPlayer.value=''" class="btn-floating">3pt</button>
+    </div>
+    <div class="col s4 ll3">
+        {{player.point}}
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col s4"></div>
+    <div class="col s4"></div>
+    <div class="col s4"><b>Total: {{sumPoint}}</b></div>
+</div>
+
+<h5>Last plays</h5>
+<div class="row">
+    <div class=" col s3"><b>Plays</b></div>
+    <div class=" col s3"><b>Points</b></div>
+</div>
+<div class="row" *ngFor="let p of temp | reverse">
+    <div class="col s3">
+        <button class="material-icons small btn-floating red" (click)="removePoint(p)">delete</button>
+            &nbsp;&nbsp;<span>{{p.name}}</span> 
+    </div>
+    <div class="col s3 ll3">{{p.current_point}}</div>
+</div>
