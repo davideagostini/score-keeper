@@ -1,5 +1,9 @@
 # Score Keeper
 
+## Demo
+
+![alt tag](https://raw.github.com/davideagostini/score-keeper/master/demo.png)
+
 ## Prerequisites
 
 Node.js and npm are essential to Angular development. 
